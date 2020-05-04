@@ -6,15 +6,9 @@
 #include "view/window.hpp"
 #include "constants.hpp"
 
-
-struct ModifiableFields
-{
-};
-
 class Application
 {
 private:
-	ModifiableFields modifiableFields;
 	std::string title;
 	Window window;
 protected:
