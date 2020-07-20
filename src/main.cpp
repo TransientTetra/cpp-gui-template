@@ -1,9 +1,9 @@
-#include "controller/application.hpp"
+#include <controller/project.hpp>
 
 // Main code
 int main(int argc, char** argv)
 {
-	Application application(DEFAULT_WINDOW_TITLE);
+	Project application(DEFAULT_WINDOW_TITLE, DEFAULT_WINDOW_HEIGHT, DEFAULT_WINDOW_WIDTH);
 	application.run();
 	return 0;
 }

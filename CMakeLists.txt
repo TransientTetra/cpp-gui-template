@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 3.13)
-project(project)
+project(Project)
 
 set(CMAKE_CXX_STANDARD 17)
 
@@ -13,7 +13,9 @@ include_directories(lib/imgui)
 include_directories(lib/googletest/googletest/include)
 include_directories(include)
 add_subdirectory(src)
-add_subdirectory(tst)
+if (CMAKE_BUILD_TYPE MATCHES Debug)
+    add_subdirectory(tst)
+endif()
 add_subdirectory(lib)
 add_executable(${CMAKE_PROJECT_NAME} src/main.cpp)
 target_link_libraries(${CMAKE_PROJECT_NAME} ${CMAKE_PROJECT_NAME}_lib Threads::Threads SDL2 GL GLEW imgui)
